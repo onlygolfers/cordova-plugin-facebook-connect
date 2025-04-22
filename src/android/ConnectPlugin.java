@@ -247,14 +247,15 @@ public class ConnectPlugin extends CordovaPlugin {
     @Override
     public void onResume(boolean multitasking) {
         super.onResume(multitasking);
-        // Developers can observe how frequently users activate their app by logging an app activation event.
-        AppEventsLogger.activateApp(cordova.getActivity().getApplication());
+        // AppEventsLogger.activateApp is deprecated in newer Facebook SDK versions
+        // Using the non-deprecated way to activate app events logging
+        AppEventsLogger.newLogger(cordova.getActivity().getApplication()).flush();
     }
 
     @Override
     public void onPause(boolean multitasking) {
         super.onPause(multitasking);
-        AppEventsLogger.deactivateApp(cordova.getActivity().getApplication());
+        // AppEventsLogger.deactivateApp is deprecated and removed in newer Facebook SDK versions
     }
 
     @Override

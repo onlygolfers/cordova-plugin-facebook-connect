@@ -88,12 +88,6 @@ Success function indicates the application ID has been updated.
 
 Success function indicates the application name has been updated.
 
-Note that in order to dynamically switch between multiple app IDs on iOS, you must use the *OTHER_APP_SCHEMES* variable and specify each additional app ID you will use with `setApplicationId` separated by a comma, e.g.
-
-```bash
-$ cordova plugin add cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable OTHER_APP_SCHEMES="fb987654321,fb876543210,fb765432109"
-```
-
 ### Login
 
 `facebookConnectPlugin.login(Array strings of permissions, Function success, Function failure)`
@@ -116,30 +110,6 @@ Success function returns an Object like:
   		errorCode: "4201",
   		errorMessage: "User cancelled"
   	}
-
-### Limited Login (iOS Only)
-
-`facebookConnectPlugin.loginWithLimitedTracking(Array strings of permissions, String nonce, Function success, Function failure)`
-
-Success function returns an Object like:
-
-	{
-		status: "connected",
-		authResponse: {
-			authenticationToken: "<long string>",
-			nonce: "foo",
-			userID: "634565435"
-		}
-	}
-
-Failure function returns an Object like:
-
-	{
-		errorCode: "4201",
-		errorMessage: "User cancelled"
-	}
-
-See the [Facebook Developer documentation](https://developers.facebook.com/docs/facebook-login/limited-login/ios/) for more details.
 
 ### Logout
 
@@ -578,10 +548,3 @@ cordova.plugins.idfa.requestPermission().then(function() {
 
 See the [Facebook Developer documentation](https://developers.facebook.com/docs/app-ads/deep-linking/) for more details.
 
-## URL Suffixes for Multiple Apps
-
-When using the same Facebook app with multiple iOS apps, use the *FACEBOOK_URL_SCHEME_SUFFIX* variable to set a unique URL Suffix for each app. This ensures that Facebook redirects back to the correct app after closing the login window.
-
-```bash
-$ cordova plugin add cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable FACEBOOK_URL_SCHEME_SUFFIX="mysecondapp"
-```

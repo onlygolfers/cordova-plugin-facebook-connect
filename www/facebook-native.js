@@ -33,14 +33,6 @@ exports.login = function (permissions, s, f) {
   exec(s, f, 'FacebookConnectPlugin', 'login', permissions)
 }
 
-exports.loginWithLimitedTracking = function (permissions, nonce, s, f) {
-  if (!nonce) {
-    exec(s, f, 'FacebookConnectPlugin', 'loginWithLimitedTracking', [permissions])
-  } else {
-    exec(s, f, 'FacebookConnectPlugin', 'loginWithLimitedTracking', [permissions, nonce])
-  }
-}
-
 exports.checkHasCorrectPermissions = function (permissions, s, f) {
   exec(s, f, 'FacebookConnectPlugin', 'checkHasCorrectPermissions', permissions)
 }

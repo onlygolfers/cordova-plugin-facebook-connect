@@ -49,11 +49,8 @@
 * Updated the Facebook JavaScript SDK used by the browser platform to v11.0
 * Updated the object returned by methods such as `login` to remove the `secret`, `session_key`, and `sig` properties, and add the new `data_access_expiration_time` property (closes [#49](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/49))
 * Added new `getApplicationId`, `setApplicationId`, `getApplicationName`, and `setApplicationName` methods to allow for dynamically switching between app IDs in code (closes [#61](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/61))
-* Added new `OTHER_APP_SCHEMES` variable which is required for iOS when using `setApplicationId` to switch between multiple app IDs
 
 ## Bug Fixes
-
-* Fixed an issue that would cause the *-Info.plist file to have a null value if FACEBOOK_URL_SCHEME_SUFFIX was null (closes [#77](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/77))
 
 <a name="2.3.0"></a>
 # [2.3.0](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/releases/tag/v2.3.0) (2021-04-21)
@@ -61,7 +58,6 @@
 ## Features
 
 * Updated the Facebook SDK to 9.1.1 for Android and 9.2.0 for iOS
-* Added new `loginWithLimitedTracking` method to allow for using Limited Login on iOS (closes [#51](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/51))
 * Added new `getCurrentProfile` method to support retrieving profile information for the currently logged in user
 
 <a name="2.2.0"></a>
@@ -154,7 +150,6 @@
 
 ## Features
 
-* Added the `FACEBOOK_URL_SCHEME_SUFFIX` preference to allow for specifying a unique URL Suffix for cases where multiple apps use the same Facebook app (closes [#3](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/3))
 * Added the `FACEBOOK_AUTO_LOG_APP_EVENTS` preference and a new `setAutoLogAppEventsEnabled` method to allow for disabling automatic event collection, an important feature for GDPR compliance (closes [#7](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/7))
 * Updated the `api` method to allow for optionally passing an httpMethod (one of "POST" or "DELETE") in Graph API requests (closes [#10](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/10))
 * Updated the `logPurchase` method to accept an optional argument for parameters (closes [#6](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/issues/6))

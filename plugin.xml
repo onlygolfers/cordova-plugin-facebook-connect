@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-facebook-connect"
-        version="3.3.0">
+        version="3.3.1">
 
     <name>Facebook Connect</name>
 
@@ -194,10 +194,6 @@
             <string>fb-messenger-share-api</string>
           </array>
         </config-file>
-
-        <edit-config target="NSUserTrackingUsageDescription" file="*-Info.plist" mode="merge">
-            <string>We use your Facebook login to personalize your experience in the app.</string>
-        </edit-config>
 
         <!-- Facebook SDK -->
         <podspec>

@@ -17,7 +17,7 @@ $ cd myApp/
 $ cordova platform add ios
 
 # Remember to replace APP_ID and APP_NAME variables
-$ cordova plugin add cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication"
+$ cordova plugin add @onlygolfers/cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication"
 ```
 
 ### Cocoapods

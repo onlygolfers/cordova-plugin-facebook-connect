@@ -13,12 +13,12 @@
 
 ## Installation
 
-See npm package for versions - https://www.npmjs.com/package/cordova-plugin-facebook-connect
+See GitHub releases for published versions - https://github.com/onlygolfers/cordova-plugin-facebook-connect/releases
 
 Make sure you've registered your Facebook app with Facebook and have an `APP_ID` [https://developers.facebook.com/apps](https://developers.facebook.com/apps).
 
 ```bash
-$ cordova plugin add cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication"
+$ cordova plugin add @onlygolfers/cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication"
 ```
 
 As the `APP_NAME` is used as a string in XML files, if your app name contains any special characters like "&", make sure you escape them, e.g. "&amp;".
@@ -467,10 +467,10 @@ facebookConnectPlugin.api("me/?fields=id,birthday&access_token=" + myAccessToken
 
 Starting from Facebook SDK v4.34 for both iOS and Android, there is a new way of converting pixel events into mobile app events. For more information: [https://developers.facebook.com/docs/app-events/hybrid-app-events/](https://developers.facebook.com/docs/app-events/hybrid-app-events/)
 
-In order to enable this feature in your Cordova app, please set the *FACEBOOK_HYBRID_APP_EVENTS* variable to "true" (default is false):
+`FACEBOOK_HYBRID_APP_EVENTS` now defaults to "true". You only need to set it explicitly if you want to be explicit in your Cordova config:
 
 ```bash
-$ cordova plugin add cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable FACEBOOK_HYBRID_APP_EVENTS="true"
+$ cordova plugin add @onlygolfers/cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable FACEBOOK_HYBRID_APP_EVENTS="true"
 ```
 
 Please check [this repo](https://github.com/msencer/fb_hybrid_app_events_sample) for an example app using this feature.
@@ -482,7 +482,7 @@ This plugin supports Facebook's [GDPR Compliance](https://developers.facebook.co
 In order to enable this feature in your Cordova app, please set the *FACEBOOK_AUTO_LOG_APP_EVENTS* variable to "false" (default is true).
 
 ```bash
-$ cordova plugin add cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable FACEBOOK_AUTO_LOG_APP_EVENTS="false"
+$ cordova plugin add @onlygolfers/cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable FACEBOOK_AUTO_LOG_APP_EVENTS="false"
 ```
 
 Then, re-enable auto-logging after an end User provides consent by calling the `setAutoLogAppEventsEnabled` method and set it to true.
@@ -500,7 +500,7 @@ facebookConnectPlugin.setAutoLogAppEventsEnabled(true, function() {
 To disable collection of `advertiser-id`, please set the *FACEBOOK_ADVERTISER_ID_COLLECTION* variable to "false" (default is true).
 
 ```bash
-$ cordova plugin add cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable FACEBOOK_ADVERTISER_ID_COLLECTION="false"
+$ cordova plugin add @onlygolfers/cordova-plugin-facebook-connect --save --variable APP_ID="123456789" --variable APP_NAME="myApplication" --variable FACEBOOK_ADVERTISER_ID_COLLECTION="false"
 ```
 
 Then, re-enable collection by calling the `setAdvertiserIDCollectionEnabled` method and set it to true.
@@ -547,4 +547,3 @@ cordova.plugins.idfa.requestPermission().then(function() {
 ```
 
 See the [Facebook Developer documentation](https://developers.facebook.com/docs/app-ads/deep-linking/) for more details.
-

@@ -1,3 +1,24 @@
+<a name="4.0.0"></a>
+# 4.0.0 (2026-03-19)
+
+## Breaking Changes
+
+* Removed the legacy iOS `OTHER_APP_SCHEMES` and `FACEBOOK_URL_SCHEME_SUFFIX` preferences
+* Switched package publishing to `@onlygolfers/cordova-plugin-facebook-connect`
+* Updated the default Facebook SDK versions to Android 13.0.0, iOS 18.0.0, and browser v13.0
+* Changed `FACEBOOK_HYBRID_APP_EVENTS` to default to `true`
+
+## Features
+
+* Added `CLIENT_TOKEN` support to the Android and iOS platform configuration
+* Updated repository metadata for the OnlyGolfers GitHub organization
+* Added GitHub Packages publishing on GitHub release publication
+
+## Bug Fixes
+
+* Removed the deprecated iOS `NSUserTrackingUsageDescription` merge from the plugin configuration
+* Replaced deprecated Android Facebook app activation calls
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/releases/tag/v3.2.0) (2021-09-17)
 

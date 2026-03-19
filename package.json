@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-facebook-connect",
+  "name": "@onlygolfers/cordova-plugin-facebook-connect",
   "version": "3.3.1",
   "description": "Cordova Facebook SDK Plugin",
   "cordova": {
@@ -12,8 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect"
+    "url": "git+https://github.com/onlygolfers/cordova-plugin-facebook-connect.git"
   },
+  "bugs": {
+    "url": "https://github.com/onlygolfers/cordova-plugin-facebook-connect/issues"
+  },
+  "homepage": "https://github.com/onlygolfers/cordova-plugin-facebook-connect#readme",
   "keywords": [
     "cordova",
     "facebook",
@@ -25,5 +29,18 @@
     "social",
     "sharing"
   ],
+  "files": [
+    "docs",
+    "scripts",
+    "src",
+    "www",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "plugin.xml"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "Apache-2.0"
 }

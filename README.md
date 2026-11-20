@@ -1,3 +1,7 @@
+> [!WARNING]
+> **Legacy — no longer maintained.** This plugin was only used by the old Cordova app (`mobile-app`).
+> The current Only Golfers apps do not use Cordova: they are native apps built in Swift (`app-ios`) and Android (`app-android`).
+
 # cordova-plugin-facebook-connect
 
 > Use Facebook SDK in Cordova projects
